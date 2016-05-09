@@ -13,6 +13,7 @@
 		02C2FF491CE1247B008E40B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C2FF481CE1247B008E40B3 /* Assets.xcassets */; };
 		02C2FF4C1CE1247B008E40B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C2FF4A1CE1247B008E40B3 /* LaunchScreen.storyboard */; };
 		02C2FF571CE12C44008E40B3 /* InteractiveStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2FF561CE12C44008E40B3 /* InteractiveStory.swift */; };
+		02C2FF5B1CE1469D008E40B3 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2FF5A1CE1469D008E40B3 /* PageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		02C2FF4B1CE1247B008E40B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02C2FF4D1CE1247B008E40B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02C2FF561CE12C44008E40B3 /* InteractiveStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveStory.swift; sourceTree = "<group>"; };
+		02C2FF5A1CE1469D008E40B3 /* PageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageController.swift; path = ../PageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		02C2FF401CE1247B008E40B3 /* InteractiveStory */ = {
 			isa = PBXGroup;
 			children = (
+				02C2FF5A1CE1469D008E40B3 /* PageController.swift */,
 				02C2FF411CE1247B008E40B3 /* AppDelegate.swift */,
 				02C2FF431CE1247B008E40B3 /* ViewController.swift */,
 				02C2FF561CE12C44008E40B3 /* InteractiveStory.swift */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C2FF571CE12C44008E40B3 /* InteractiveStory.swift in Sources */,
+				02C2FF5B1CE1469D008E40B3 /* PageController.swift in Sources */,
 				02C2FF441CE1247B008E40B3 /* ViewController.swift in Sources */,
 				02C2FF421CE1247B008E40B3 /* AppDelegate.swift in Sources */,
 			);
