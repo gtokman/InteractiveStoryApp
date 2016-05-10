@@ -18,27 +18,44 @@ enum Story {
 	case Monster
 	case Droid(String)
 	case Home
-    
-    var rawValue: String {
-        switch self {
-        case .ReturnTrip: return "ReturnTrip"
-        case .TouchDown: return "TouchDown"
-        case .Homeward: return "Homeward"
-        case .Rover: return "Rover"
-        case .Cave: return "Cave"
-        case .Crate: return "Crate"
-        case .Monster: return "Monster"
-        case .Droid: return "Droid"
-        case .Home: return "Home"
-        }
-    }
-    
+
+	var rawValue: String {
+		switch self {
+		case .ReturnTrip: return "ReturnTrip"
+		case .TouchDown: return "TouchDown"
+		case .Homeward: return "Homeward"
+		case .Rover: return "Rover"
+		case .Cave: return "Cave"
+		case .Crate: return "Crate"
+		case .Monster: return "Monster"
+		case .Droid: return "Droid"
+		case .Home: return "Home"
+		}
+	}
 }
 
 extension Story {
 	// Artwork
 	var artwork: UIImage {
 		return UIImage(named: self.rawValue)!
+	}
+
+	// Sound effect
+	var soundEffectURL: NSURL {
+		let fileName: String
+        
+        switch self {
+        case .Droid, .Home:
+            fileName = "HappyEnding"
+        case .Monster:
+            fileName = "Ominous"
+        default:
+            fileName = "PageTurn"
+        }
+
+		let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "wav")!
+        
+        return NSURL(fileURLWithPath: path)
 	}
 
 	// Text
@@ -100,7 +117,7 @@ extension Page {
 }
 
 struct Adventure {
-    static func story(name: String) -> Page {
+	static func story(name: String) -> Page {
 		let returnTrip = Page(story: .ReturnTrip(name))
 		let touchdown = returnTrip.addChoice("Stop and Investigate", story: .TouchDown)
 		let homeward = returnTrip.addChoice("Continue Home to Earth", story: .Homeward)
